@@ -32,3 +32,17 @@ How to achieve efficient P2P connections between DP instances and Experts instan
 ![image-20250326212419869](./images/image-20250326212419869.png)
 
 If connections are established using the method shown in the left image above, efficient RDMA communication can reduce latency. However, if a DP instance or an Experts instance fails, it will affect the connected DP instances or Experts instances, as indicated by the red-bordered instances in the upper left image. If our DP instances and Experts instances are not directly connected but instead routed through a common interface, this can effectively block the mutual influence between DP instances and Experts instances. However, the question remains whether this approach can be efficient enough, given that each layer needs to request Experts instances frequently and has high time requirements. If there are experts in communication, your insights would be greatly appreciated.
+
+### Citation
+
+If you refer my code or this idea, or otherwise found my work valuable, please cite:
+
+```
+@misc{SAMMS,
+      title={SAMMS: A Novel Stable and Production-Ready Deployment Architecture for MOE Models},
+      author={PC.Yang},
+      year={2025},
+      publisher = {GitHub},
+      howpublished = {\url{https://github.com/yangpc615/SAMMS}},
+}
+```
